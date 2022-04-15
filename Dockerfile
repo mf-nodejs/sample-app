@@ -5,15 +5,15 @@ FROM base as builder
 WORKDIR /opt/app-root/src
 
 COPY package*.json ./
-#COPY client/package*.json client/
+
 WORKDIR /opt/app-root/src/ 
-#RUN npm ci
-RUN npm ci && npm run build
+
+RUN npm ci 
 
 COPY public public 
 COPY src src 
 
-#RUN npm run build
+RUN npm run build
 
 FROM base
 
