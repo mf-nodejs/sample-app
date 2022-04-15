@@ -5,8 +5,10 @@ FROM base as builder
 WORKDIR /opt/app-root/src
 
 COPY package*.json ./
-
+#COPY client/package*.json client/
+WORKDIR /opt/app-root/src/client 
 RUN npm ci
+#RUN npm ci && npm run build
 
 COPY public public 
 COPY src src 
@@ -23,6 +25,7 @@ COPY package*.json ./
 
 RUN npm ci --only=production
 
+#COPY --chown=default:root server server
 COPY --chown=1001:0 server server
 RUN chmod -R g=u server
 
