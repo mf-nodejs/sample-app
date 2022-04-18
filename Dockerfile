@@ -34,8 +34,10 @@ ENV PORT=8080
 LABEL com.example.source="https://github.com/csantanapr/think2020-nodejs"
 LABEL com.example.version="1.0"
 
-ARG ENV=production
-ENV NODE_ENV $ENV
+# ARG ENV=production
+# ENV NODE_ENV $ENV
 ENV NODE_VERSION $NODEJS_VERSION
 # hadolint ignore=DL3025
-CMD npm run $NODE_ENV
+#CMD npm run $NODE_ENV
+RUN npm run build
+CMD npm run production
