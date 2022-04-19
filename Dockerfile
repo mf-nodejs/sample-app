@@ -4,9 +4,7 @@ FROM base as builder
 
 WORKDIR /opt/app-root/src
 
-COPY package*.json ./
-
-WORKDIR /opt/app-root/src/ 
+COPY package*.json ./ 
 
 RUN npm ci 
 
@@ -39,5 +37,5 @@ LABEL com.example.version="1.0"
 ENV NODE_VERSION $NODEJS_VERSION
 #hadolint ignore=DL3025
 #CMD npm run $NODE_ENV
-RUN npm run build
+#RUN npm run build
 CMD npm run production
