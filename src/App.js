@@ -12,7 +12,7 @@ function App() {
           style={{ width: "10em" }}
           alt="logo"
         />
-        Congratulations!
+        Congratulations for completing you 3rd day workshop!
       </header>
     </div>
   );
