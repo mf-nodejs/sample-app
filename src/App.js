@@ -13,6 +13,7 @@ function App() {
           alt="logo"
         />
         <div>Congratulations!!!</div>
+        <div>You've successfully completed 3rd day training workshop with CE</div>
       </header>
     </div>
   );
