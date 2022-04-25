@@ -12,7 +12,8 @@ function App() {
           style={{ width: "10em" }}
           alt="logo"
         />
-        Congratulations for completing your 3rd day workshop with CE!
+        Congratulations!! 
+        You've successfully completed 3rd day training workshop with CE
       </header>
     </div>
   );
