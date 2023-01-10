@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <Confetti />
         <img
-          src={require("./images/tapestryLogo.jpeg")}
+          src={require("./images/shoprite.jpeg")}
           style={{ width: "10em" }}
           alt="logo"
         />
